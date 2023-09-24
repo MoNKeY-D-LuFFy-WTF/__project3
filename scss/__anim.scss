@@ -1,0 +1,177 @@
+$mainColor: #083791;
+$colorText: #444;
+$buttonColor: #ff8e32;
+$simpleColor: #fff;
+$h1FontSize: calc(25px + 24 * (100vw / 1915)); //50PX
+$h2FontSize: calc(18px + 32 * (100vw / 1915)); //40PX
+$h3FontSize: calc(17px + 13 * (100vw / 1915)); //30PX
+$h4FontSize: calc(14px + 6 * (100vw / 1915)); //20PX
+$h5FontSize: calc(12px + 6 * (100vw / 1915)); //18PX
+$h6FontSize: calc(10px + 6 * (100vw / 1915)); //16PX
+$FontSizeLorem: calc(10px + 6 * (100vw / 1915)); //16PX
+$fontSizeMin: calc(7px + 6 * (100vw / 1915)); //13PX
+$trensitionOfButton: 0.4s ease-in-out 0s;
+
+.header {
+    &__nav-list li>a:hover {
+        background: $mainColor;
+        color: $simpleColor;
+        transform: scale(1.5, 1.5);
+        transition: $trensitionOfButton;
+        border-radius: 20px;
+    }
+
+    &__nav-list li:hover {
+        transform: scale(1.2, 1.2);
+        transition: $trensitionOfButton;
+    }
+
+    &__nav-burger {
+        transition: $trensitionOfButton;
+    }
+
+    &__nav-burger.active {
+        transition: $trensitionOfButton;
+
+    }
+
+    &__nav-burger span {
+        transition: $trensitionOfButton;
+    }
+
+    &__nav-list {
+        transition: $trensitionOfButton;
+    }
+
+    &__nav-list.active {
+        transition: $trensitionOfButton;
+    }
+}
+
+.main {
+    &__healthcare-button a:hover {
+        background-color: $simpleColor;
+        color: $buttonColor;
+        transition: $trensitionOfButton;
+        border: solid 1px $buttonColor;
+    }
+
+    &__best-button a:hover {
+        background-color: $simpleColor;
+        color: $buttonColor;
+        transition: $trensitionOfButton;
+        border: solid 1px $buttonColor;
+    }
+
+    &__professional-button a:hover {
+        background-color: $simpleColor;
+        color: $buttonColor;
+        transition: $trensitionOfButton;
+        border: solid 1px $buttonColor;
+    }
+
+    &__professional-buttons a {
+        transition: $trensitionOfButton;
+    }
+
+    &__professional-buttons a:hover {
+        background: $simpleColor;
+        color: $mainColor;
+        transition: $trensitionOfButton;
+        border: solid 1px $mainColor;
+    }
+
+    &__professional-buttons &__professional-button-white:hover {
+        background-color: $mainColor;
+        border: solid 1px $simpleColor;
+        color: $simpleColor;
+    }
+
+    &__reviews-card:hover &__reviews-swap {
+        animation: cardOfScale 1s ease 0.1s forwards;
+
+    }
+
+    &__reviews-button a:hover {
+        background-color: $simpleColor;
+        color: $buttonColor;
+        transition: $trensitionOfButton;
+        border: solid 1px $buttonColor;
+    }
+
+
+}
+
+.get-form {
+    &__button button {
+        transition: $trensitionOfButton;
+    }
+
+    &__button button:hover {
+        background-color: $simpleColor;
+        color: $buttonColor;
+        transition: $trensitionOfButton;
+        border: solid 1px $buttonColor;
+    }
+}
+
+.professional-card {
+    &__link a:hover {
+        color: $simpleColor;
+        transition: $trensitionOfButton;
+        border: solid 1px $buttonColor;
+    }
+
+    &__link a {
+        color: $simpleColor;
+        transition: $trensitionOfButton;
+    }
+}
+
+.footer {
+    &__services-list li>a {
+        transition: $trensitionOfButton;
+
+    }
+
+    &__services-list li>a:hover {
+        transition: $trensitionOfButton;
+        color: $mainColor;
+    }
+
+    &__newslatter-button button:hover {
+        background-color: $simpleColor;
+        transition: $trensitionOfButton;
+        color: $buttonColor;
+        border: solid 1px $buttonColor;
+    }
+
+    &__newslatter-button button {
+        transition: $trensitionOfButton;
+
+    }
+}
+
+@keyframes opacityScrollNav {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes cardOfScale {
+    from {
+        transform: scale(0, 0);
+    }
+
+    50% {
+        transform: scale(1.2, 1.2);
+    }
+
+    to {
+        transform: scale(1, 1);
+    }
+}

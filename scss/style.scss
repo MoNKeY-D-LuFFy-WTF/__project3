@@ -1,0 +1,1234 @@
+@import "__null";
+@import "__fonts";
+@import "__anim";
+$mainColor: #083791;
+$colorText: #444;
+$buttonColor: #ff8e32;
+$simpleColor: #fff;
+$h1FontSize: calc(25px + 24 * (100vw / 1915)); //50PX
+$h2FontSize: calc(18px + 32 * (100vw / 1915)); //40PX
+$h3FontSize: calc(17px + 13 * (100vw / 1915)); //30PX
+$h4FontSize: calc(14px + 6 * (100vw / 1915)); //20PX
+$h5FontSize: calc(12px + 6 * (100vw / 1915)); //18PX
+$h6FontSize: calc(10px + 6 * (100vw / 1915)); //16PX
+$FontSizeLorem: calc(10px + 6 * (100vw / 1915)); //16PX
+$fontSizeMin: calc(7px + 6 * (100vw / 1915)); //13PX
+$trensitionOfButton: 0.4s ease-in-out 0s;
+
+body {
+    font-family: "Muli-Regular", Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: $h1FontSize;
+    color: $mainColor;
+    font-weight: 900;
+}
+
+h2 {
+    font-size: $h2FontSize;
+    font-weight: 900;
+}
+
+h3 {
+    font-size: $h3FontSize;
+    font-weight: 900;
+}
+
+h4 {
+    font-size: $h4FontSize;
+    font-weight: 800;
+}
+
+h5 {
+    font-size: $h5FontSize;
+    font-weight: 900;
+
+}
+
+h6 {
+    font-size: $h6FontSize;
+    font-weight: 800;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1170px;
+    padding: 0px 10px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.logo {
+
+    display: flex;
+    align-items: center;
+    color: $mainColor;
+    gap: 10px;
+
+
+    &__img {
+        object-fit: cover;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__subtitle {
+        font-size: calc(12px + 2* (100vw / 1915));
+        font-weight: 600;
+    }
+}
+
+
+.header {
+
+    &__tags {
+        background-color: $mainColor;
+    }
+
+    &__tags-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: calc(10px + 6 * (100vw / 1915)) 0;
+    }
+
+    &__tags-text {
+        font-size: $fontSizeMin;
+        line-height: 26px;
+    }
+
+    &__tags-text span {
+        color: $simpleColor;
+    }
+
+    &__tags-tag {
+        font-size: $fontSizeMin;
+        line-height: 26px;
+    }
+
+    &__tags-tag span {
+        color: $simpleColor;
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: calc(20px + 5 * (100vw / 1915)) 0px;
+        position: sticky;
+        top: 0;
+    }
+
+    &__nav-scroll {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 15;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 1) 60%, rgba(8, 55, 145, 1) 100%);
+        width: 100%;
+        animation: opacityScrollNav 1s ease 0.1s;
+    }
+
+    &__nav-list {
+        display: flex;
+        gap: 30px;
+    }
+
+    &__nav-list li>a {
+        color: $mainColor;
+        font-size: $FontSizeLorem;
+        line-height: 26px;
+        font-weight: 600;
+        color: $mainColor;
+        padding: 10px;
+    }
+
+    &__nav-burger {
+        display: none;
+    }
+
+    &__nav-serach {
+        color: $mainColor;
+        font-size: $FontSizeLorem;
+        line-height: 26px;
+        font-weight: 600;
+        color: $mainColor;
+    }
+}
+
+.main {
+    flex: 1 1 auto;
+
+    &__healthcare {
+        background: url(../img/image_bg_shape_155078.png) center/cover no-repeat;
+    }
+
+    &__healthcare-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: calc(110px + 76 * (100vw / 1915)) 0px calc(90px + 95* (100vw / 1915)) 0px; //186px
+        max-width: 600px;
+    }
+
+    &__healthcare-first {
+        margin: 0px 0px 28px 0px;
+    }
+
+    &__healthcare-first h4 {
+        font-weight: 700;
+        color: $mainColor;
+    }
+
+    &__healthcare-title {
+        margin: 0px 0px 30px 0px;
+    }
+
+    &__healthcare-subtitle {
+        margin: 0px 0px 67px 0px;
+    }
+
+    &__healthcare-subtitle p {
+        font-size: calc(15px + 2 * (100vw / 1915));
+        font-weight: 600;
+        color: $mainColor;
+    }
+
+    &__healthcare-button a {
+        padding: calc(14px + 3 * (100vw / 1915)) calc(19px + 5 * (100vw / 1915));
+        background-color: $buttonColor;
+        color: $simpleColor;
+        font-size: calc(15px + 2 * (100vw / 1915));
+        font-weight: 600;
+        transition: $trensitionOfButton;
+        border-radius: 5px;
+    }
+
+
+    &__best-rows {
+        padding: calc(90px + 30 * (100vw / 1915)) 0px calc(150px + 60 * (100vw / 1915)) 0px;
+        align-items: center;
+    }
+
+    &__best-text {
+        max-width: 365px;
+    }
+
+    &__best-first {
+        margin: 0px 0px 25px 0px;
+    }
+
+    &__best-first h5 {
+        color: $mainColor;
+    }
+
+    &__best-title {
+        margin: 0px 0px 35px 0px;
+        line-height: 50px;
+    }
+
+    &__best-title h2 {
+        color: $mainColor;
+    }
+
+    &__best-subtitle {
+        margin: 0px 0px 68px 0px;
+    }
+
+    &__best-subtitle p {
+        font-size: $FontSizeLorem;
+        line-height: 28px;
+        color: $colorText;
+    }
+
+    &__best-button a {
+        background-color: #ff8e32;
+        border-radius: 4px;
+        font-size: $FontSizeLorem;
+        line-height: 28px;
+        font-weight: 700;
+        color: #ffffff;
+        padding: calc(14px + 3 * (100vw / 1915)) calc(16px + 5 * (100vw / 1915));
+
+    }
+
+    &__best-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__best-card:nth-child(3)::after {
+        content: "";
+        display: block;
+        width: 370px;
+        height: 2px;
+        background-color: $mainColor;
+    }
+
+    &__best-img {
+        object-fit: cover;
+    }
+
+    &__best-img-container {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    &__best-img-container::after {
+        content: "";
+        background: url(../img/overlay_155207.png) 0% 0% no-repeat;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    &__professional {
+        background: url(../img/overlay_155212.png) center/cover no-repeat;
+    }
+
+    &__professional-content {
+        align-items: center;
+    }
+
+    &__professional-card {
+        width: 370px;
+        height: 531px;
+        border-radius: 10px;
+        background: url(../img/image_bg_shape_155425.png) 0% 0% no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateY(-120px);
+    }
+
+    &__professional-text {
+        max-width: 675px;
+    }
+
+    &__professional-first h5 {
+        line-height: 50px;
+        color: $simpleColor;
+    }
+
+    &__professional-title {
+        margin: 0px 0px 79px 0px;
+    }
+
+    &__professional-title h2 {
+        line-height: 50px;
+        color: $simpleColor;
+    }
+
+    &__professional-button a {
+        font-size: $FontSizeLorem;
+        line-height: 28px;
+        font-weight: 700;
+        color: $simpleColor;
+        padding: calc(14px + 3 * (100vw / 1915)) calc(19px + 6 * (100vw / 1915));
+        background-color: $buttonColor;
+        border-radius: 4px;
+    }
+
+
+    &__professional-buttons {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    &__professional-buttons a {
+        font-size: $FontSizeLorem;
+        line-height: 26px;
+        font-weight: 800;
+        text-transform: uppercase;
+        background-color: $mainColor;
+        color: $simpleColor;
+        padding: calc(14px + 4 * (100vw / 1915)) calc(28px + 11 * (100vw / 1915));
+    }
+
+    &__professional-buttons &__professional-button-white {
+        background-color: $simpleColor;
+        color: $mainColor;
+    }
+
+
+    &__service {
+        padding: calc(65px + 25* (100vw / 1915)) 0px calc(150px + 27 * (100vw / 1915)) 0px;
+    }
+
+    &__service-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__service-text {
+        max-width: 365px;
+    }
+
+
+    &__service-first h5 {
+        line-height: 28px;
+        color: $mainColor;
+    }
+
+    &__service-title {
+        margin: 0px 0px 40px 0px;
+    }
+
+    &__service-title h2 {
+        line-height: 50px;
+        color: $mainColor;
+    }
+
+    &__service-subtitle {
+        margin: 0px 0px 45px 0px;
+    }
+
+    &__service-subtitle p {
+        font-size: $FontSizeLorem;
+        line-height: 28px;
+        color: $colorText;
+    }
+
+    &__service-button a {
+        font-size: $colorText;
+        line-height: 28px;
+        font-weight: 700;
+        color: $mainColor;
+    }
+
+
+
+    &__service-cards {
+        display: grid;
+        grid-template: auto auto / auto auto;
+        gap: 30px;
+    }
+
+    &__service-card {
+        width: calc(330px + 40 * (100vw / 1915));
+        height: 188px;
+        background-color: $simpleColor;
+        box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.07);
+        padding: 36px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, auto);
+        align-items: center;
+    }
+
+    &__reviews {
+        background: url(../img/image_bg_shape_155480.png) center/cover no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__reviews-text {
+        max-width: 765px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &__reviews-first {
+        margin: 55px 0px 0px 0px;
+    }
+
+    &__reviews-first h5 {
+        line-height: 50px;
+        color: $simpleColor;
+    }
+
+    &__reviews-title {
+        margin: 0px 0px 25px 0px;
+    }
+
+    &__reviews-title h2 {
+        line-height: 50px;
+        color: $simpleColor;
+    }
+
+    &__reviews-subtitle p {
+        line-height: 28px;
+        color: $simpleColor;
+    }
+
+    &__reviews-cards {
+        display: flex;
+        gap: 31px;
+        align-items: center;
+        justify-content: space-between;
+        transform: translateY(25%);
+    }
+
+    &__reviews-card {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    &__reviews-swap {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+        padding: 120px 0px 0px 0px;
+        width: 100%;
+        height: 100%;
+        background: url(../img/overlay_155837.png) 0% 0% no-repeat;
+        transform: scale(0, 0);
+    }
+
+    &__reviews-button {
+        display: flex;
+        align-items: center;
+        margin: 175px 0px 112px 0px;
+    }
+
+    &__reviews-button a {
+        padding: calc(13px + 4 * (100vw / 1915)) calc(18px + 4 * (100vw / 1915));
+        background-color: $buttonColor;
+        border-radius: 4px;
+        margin: 0 auto;
+        font-size: $FontSizeLorem;
+        font-weight: 700;
+        color: $simpleColor;
+    }
+
+
+
+    &__quality-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        max-width: 535px;
+        margin: 0px 0px 50px 0px;
+
+    }
+
+    &__quality-first {
+        margin: 0px 0px 24px 0px;
+    }
+
+    &__quality-first h5 {
+        line-height: 28px;
+        color: $mainColor;
+    }
+
+    &__quality-title {
+        margin: 0px 0px 38px 0px;
+    }
+
+    &__quality-title h2 {
+        line-height: 28px;
+        color: $mainColor;
+    }
+
+    &__quality-subtitle {
+        margin: 0px 0px 60px 0px;
+    }
+
+    &__quality-subtitle p {
+        line-height: 28px;
+        color: $colorText;
+    }
+
+    &__quality-columns {
+        gap: 58px;
+
+    }
+
+    &__quality-column {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+    }
+
+    &__numbers {
+        padding: 230px 0px 140px 0px;
+        background: url(../img/image_bg_shape_156211.png) center/cover no-repeat;
+    }
+
+    &__numbers-rows {
+        gap: 151px;
+    }
+
+    &__numbers-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__numbers-number span {
+        font-size: calc(40px + 20* (100vw / 1915));
+        line-height: 50px;
+        font-weight: 600;
+        color: $mainColor;
+    }
+
+
+    &__questions {
+        background: url(../img/layer_3_156360.png) center/cover no-repeat;
+        padding: 140px 0px 95px 0px;
+    }
+
+    &__questions-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__questions-img {
+        object-fit: cover;
+    }
+
+    &__questions-text {
+        max-width: 600px;
+    }
+
+
+    &__questions-first h5 {
+        line-height: 50px;
+        color: $mainColor;
+    }
+
+    &__questions-title {
+        margin: 0px 0px 20px 0px;
+    }
+
+    &__questions-title h2 {
+        line-height: 50px;
+        color: $mainColor;
+    }
+
+    &__questions-subtitle {
+        margin: 0px 0px 45px 0px;
+    }
+
+    &__questions-subtitle p {
+        font-size: $FontSizeLorem;
+        line-height: 28px;
+        color: $colorText;
+    }
+
+    &__questions-row {
+        margin: 0px 0px 15px 0px;
+    }
+
+    &__questions-row h4 {
+        color: $simpleColor;
+        padding: $FontSizeLorem 0px $FontSizeLorem 20px;
+        background-color: $mainColor;
+    }
+
+    &__questions-rowtext {
+        margin: 0px 0px 40px 0px;
+    }
+
+    &__questions-rowtext p {
+        font-size: $FontSizeLorem;
+        line-height: 28px;
+        color: $colorText;
+    }
+
+    &__questions-question {
+        line-height: 50px;
+        color: $mainColor;
+    }
+
+
+    &__systems {
+        padding: 173px 0px 210px 0px;
+        background: url(../img/layer_3_156360.png) right/cover no-repeat;
+    }
+
+    &__systems-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__systems-text {
+        text-align: center;
+    }
+
+    &__systems-first h5 {
+        line-height: 50px;
+        color: $mainColor;
+    }
+
+    &__systems-title {
+        margin: 0px 0px 50px 0px;
+    }
+
+    &__systems-title h2 {
+        line-height: 50px;
+        color: $mainColor;
+    }
+
+    &__systems-rows {
+        gap: 30px;
+    }
+
+    &__systems-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 26px;
+    }
+
+    &__systems-img {
+        object-fit: cover;
+    }
+
+    &__get {
+        background: url(../img/overlay_156448.png) center/cover no-repeat;
+        padding: calc(125px + 15 * (100vw / 1915)) 0px;
+    }
+
+    &__get-content {
+        display: flex;
+        gap: 160px;
+    }
+
+    &__get-text {
+        max-width: 645px;
+    }
+
+
+    &__get-first h5 {
+        line-height: 49px;
+        color: $simpleColor;
+    }
+
+    &__get-title {
+        margin: 0px 0px 20px 0px;
+    }
+
+    &__get-title h2 {
+        line-height: 49px;
+        color: $simpleColor;
+    }
+
+    &__get-subtitle {
+        margin: 0px 0px 10px 0px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__get-subtitle p {
+        font-size: $FontSizeLorem;
+        line-height: 28px;
+        color: $simpleColor;
+    }
+
+    &__get-phone a {
+        font-size: $FontSizeLorem;
+        line-height: 28px;
+        font-weight: 800;
+        color: $buttonColor;
+    }
+
+    &__get-form {
+        width: calc(350px + 20 * (100vw / 1915));
+        height: 603px;
+        border-radius: 10px;
+        background: url(../img/image_bg_shape_156456.png) center/cover no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 70px 50px 90px 35px;
+        transform: translateY(-40%);
+    }
+
+}
+
+.get-form {
+
+    &__title h3 {
+        line-height: 40px;
+        color: $simpleColor;
+    }
+
+
+    &__subtitle p {
+        font-size: $FontSizeLorem;
+        line-height: 40px;
+        font-weight: 600;
+        font-style: italic;
+        color: $simpleColor;
+    }
+
+    &__email {
+        margin: 0px 0px 20px 0px;
+    }
+
+    &__email input {
+        width: 300px;
+        height: 42px;
+        border-radius: 5px;
+        padding: 0px 0px 0px 15px;
+    }
+
+    &__select {
+        margin: 0px 0px 20px 0px;
+    }
+
+    &__select select {
+        width: 300px;
+        height: 42px;
+        border-radius: 5px;
+        padding: 0px 0px 0px 15px;
+    }
+
+    &__name {
+        margin: 0px 0px 20px 0px;
+    }
+
+    &__name input {
+        width: 300px;
+        height: 42px;
+        border-radius: 5px;
+        padding: 0px 0px 0px 15px;
+    }
+
+    &__button button {
+        margin: 30px 0px 0px 0px;
+        width: 170px;
+        height: 42px;
+        background-color: #ff8e32;
+        border-radius: 5px;
+        color: $simpleColor;
+        font-size: calc(10px + 2 * (100vw / 1915));
+        line-height: 28px;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+}
+
+.systems-rows {
+
+    &__text {
+        max-width: 320px;
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    &__title h4 {
+        padding: 0px 0px 0px 60px;
+        line-height: 28px;
+        color: $mainColor;
+    }
+
+    &__title span {
+        width: 52px;
+        height: 84px;
+        background-color: $mainColor;
+        border-radius: 5px;
+        display: block;
+        padding: 20px 0px 0px 0px;
+        text-align: center;
+        color: $simpleColor;
+        position: absolute;
+        top: -50px;
+        font-size: $FontSizeLorem;
+        font-weight: 800;
+        line-height: 20px;
+    }
+
+    &__subtitle p {
+        font-size: $FontSizeLorem;
+        line-height: 28px;
+        color: $colorText;
+    }
+
+    &__button a {
+        font-size: $FontSizeLorem;
+        line-height: 28px;
+        font-weight: 700;
+        color: $mainColor;
+    }
+
+    &__title &__title-orange {
+        background-color: $buttonColor;
+    }
+
+    .main__systems-row &__button-orange {
+        color: $buttonColor;
+    }
+}
+
+.quality-column {
+
+    &__img {
+        object-fit: cover;
+    }
+
+    &__title h4 {
+        line-height: 28px;
+        color: $mainColor;
+    }
+
+    &__subtitle p {
+        font-size: $FontSizeLorem;
+        line-height: 28px;
+        color: $colorText;
+    }
+}
+
+.reviews-swap {
+
+    &__title h4 {
+        line-height: 28px;
+        color: $simpleColor;
+    }
+
+    &__subtitle h6 {
+        line-height: 28px;
+        font-weight: 400;
+        color: $simpleColor;
+    }
+
+    &__icons {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    &__phone a {
+        font-size: $FontSizeLorem;
+        line-height: 28px;
+        font-weight: 700;
+        color: $simpleColor;
+    }
+}
+
+.service-card {
+
+    &__img {
+        grid-row: 1/2;
+        grid-column: 1/3;
+        object-fit: cover;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    &__img::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: -40%;
+        left: -4%;
+        background: url(../img/shape_155364.png) 0% 0% no-repeat;
+        width: 53px;
+        height: 53px;
+    }
+
+    &__title {
+        grid-row: 1/2;
+        grid-column: 1/3;
+        transform: translateX(20%);
+    }
+
+    &__title h4 {
+        line-height: 28px;
+        color: $mainColor;
+    }
+
+    &__subtitle p {
+        font-size: $FontSizeLorem;
+        line-height: 28px;
+        color: $colorText;
+    }
+
+    &__subtitle {
+        grid-row: 2/3;
+        grid-column: 1/3;
+    }
+}
+
+
+.professional-card {
+    &__link {
+        margin: 40px 0px 0px 0px;
+    }
+
+    &__link a {
+        color: $buttonColor;
+        text-transform: uppercase;
+    }
+
+    &__title {
+        margin: 79px 0px 40px 0px;
+    }
+
+    &__title h3 {
+        line-height: 40px;
+        color: $simpleColor;
+    }
+
+    &__list li {
+        font-size: $FontSizeLorem;
+        line-height: 40px;
+        color: $simpleColor;
+    }
+}
+
+.best-card {
+
+    &__text {
+        max-width: 305px;
+        padding: 30px 0px 32px 0px;
+    }
+
+    &__title {
+        margin: 0px 0px 23px 0px;
+    }
+
+    &__title h4 {
+        line-height: 28px;
+        font-weight: 800;
+        color: $mainColor;
+    }
+
+    &__subtitle {
+        margin: 0px 0px 20px 0px;
+    }
+
+    &__subtitle p {
+        font-size: $FontSizeLorem;
+        line-height: 28px;
+        color: $colorText;
+    }
+
+    &__more span {
+        font-size: calc(10px + 4 * (100vw / 1915));
+        line-height: 28px;
+        font-weight: 600;
+        color: $colorText;
+    }
+
+    &__more-blue span {
+        color: $mainColor;
+    }
+}
+
+.footer {
+    padding: calc(80px + 20 * (100vw / 1915)) 0px calc(15px + 15 * (100vw / 1915)) 0px;
+
+    &__first {
+        display: flex;
+        justify-content: space-between
+    }
+
+
+    &__logo {
+        max-width: 365px;
+        margin: 0px 0px 30px 0px;
+    }
+
+    &__logo-img {
+        object-fit: cover;
+        margin: 0px 0px 34px 0px;
+    }
+
+    &__logo-subtitle {
+        margin: 0px 0px 15px 0px;
+    }
+
+    &__logo-subtitle p {
+        font-size: $FontSizeLorem;
+        line-height: 20px;
+        color: $colorText;
+    }
+
+    &__logo-link a {
+        font-size: $FontSizeLorem;
+        line-height: 28px;
+        font-weight: 700;
+        color: $mainColor;
+    }
+
+
+    &__services-title {
+        margin: 0px 0px 30px 0px;
+    }
+
+    &__services-title h4 {
+        line-height: 28px;
+        font-weight: 900;
+        color: $colorText;
+    }
+
+    &__services-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__services-list li>a {
+        font-size: $FontSizeLorem;
+        line-height: 31px;
+        color: $colorText;
+    }
+
+    &__post {
+        margin: 0px 60px 0px 40px;
+    }
+
+    &__post-title {
+        margin: 0px 0px 30px 0px;
+    }
+
+    &__post-title h4 {
+        line-height: 22px;
+        color: $colorText;
+    }
+
+    &__post-about:nth-child(3) {
+        margin: 35px 0px;
+    }
+
+    &__post-about h6 {
+        line-height: 22px;
+        color: $mainColor;
+    }
+
+    &__post-about p {
+        font-size: calc(10px + 3 * (100vw / 1915));
+        line-height: 22px;
+        color: $colorText;
+    }
+
+    &__newslatter {
+        max-width: 260px
+    }
+
+    &__newslatter-title {
+        margin: 0px 0px 30px 0px;
+    }
+
+    &__newslatter-title h4 {
+        line-height: 22px;
+        color: $colorText;
+    }
+
+    &__newslatter-subtitle {
+        margin: 0px 0px 22px 0px;
+    }
+
+    &__newslatter-subtitle p {
+        font-size: $FontSizeLorem;
+        line-height: 28px;
+        color: $colorText;
+    }
+
+    &__newslatter-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__newslatter-imput {
+        margin: 0px 0px 18px 0px;
+    }
+
+    &__newslatter-imput input {
+        width: 270px;
+        height: 40px;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        padding: 0px 0px 0px 15px;
+    }
+
+    &__newslatter-button button {
+        width: 120px;
+        height: 35px;
+        background-color: $buttonColor;
+        border-radius: 3px;
+        font-size: $FontSizeLorem;
+        line-height: 28px;
+        font-weight: 700;
+        color: $simpleColor
+    }
+
+    &__last {
+        padding: 85px 0px 0px 0px;
+    }
+
+    &__last-content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__last-avtor span {
+        font-size: $FontSizeLorem;
+        line-height: 28px;
+        color: $colorText;
+    }
+
+
+    &__last-list {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__last-list li {
+        width: 35px;
+        height: 35px;
+        border: 1px solid #ddd;
+        border-radius: 50%
+    }
+
+}
+
+
+@import "__media";
+
+
+
